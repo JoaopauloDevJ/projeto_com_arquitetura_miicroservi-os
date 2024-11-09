@@ -1,0 +1,24 @@
+server:
+  port: 8083
+  wait-time-in-ms-when-sync-wmpty: 3000
+
+spring: 
+  spring:
+    profiles:
+      active: native
+
+  data:
+    mongodb:
+      uri:
+      database: salesdb
+      auto-index-creation: true
+
+  
+application:
+  productService:
+    url: http://localhost:8082
+    endpointConsultProduct: ${application.product-service.url}/produto
+  clientService:
+    url: http://localhost:8081
+    endpointConsultClient: ${application.client-service.url}/cliente/isCadastrado/{id}
+application-version: 2.0 

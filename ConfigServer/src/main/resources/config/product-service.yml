@@ -1,0 +1,14 @@
+server:
+  port: 8082
+  wait-time-in-ms-when-sync-empty: 3000
+ 
+spring:
+  spring:
+   profiles:
+     active: native
+ 
+  data:
+    mongodb: 
+      uri:
+      database: productdb
+      auto-index-creation: true
